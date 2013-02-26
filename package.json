@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "David Herron",
+    "email": "david@davidherron.com",
+    "url": "http://nodejs.davidherron.com"
+  },
+  "name": "akashacms-linkshare",
+  "description": "A plug-in for AkashaCMS to access Linkshare Product API.",
+  "homepage": "https://github.com/robogeek/akashacms-linkshare",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robogeek/akashacms-linkshare.git"
+  },
+  "version": "0.0.3",
+  "engines": {
+    "node": ">=0.8.1"
+  },
+  "dependencies": {
+    "async": ">=0.1.22",
+    "linksharejs": ">=0.0.1"
+  }
+}

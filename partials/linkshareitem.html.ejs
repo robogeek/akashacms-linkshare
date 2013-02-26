@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <td><%= row.productname %></td>
+        <td><%= row.merchant %> <%= row.merchantid %></td>
+        <td><%= row.keywords %></td>
+    </tr>
+    <tr><td colspan=3>
+        <a href="<%= row.linkurl%>"><img src="<%= row.imageurl %>" align="right"></a>
+        <%= row.descriptionshort %>
+    </td></tr>
+    <tr><td colspan=3><%= row.descriptionlong %></td></tr>
+    <tr><td colspan=3><%= row.price %> <%= row.currency %> <%= row.country %></td></tr>
+    <tr><td colspan=3><a href="<%= row.linkurl%>"><%= row.linkurl %></a></td></tr>
+    <tr><td colspan=3><%= row.categoryprimary %></td></tr>
+    <tr><td colspan=3><%= row.categorysecondary %></td></tr>
+    <tr><td colspan=3>
+        linkid: <%= row.linkid %>
+        createdon: <%= row.createdon %>
+        sku: <%= row.sku %>
+        upccode: <%= row.upccode %>
+    </td></tr>
+</table>
