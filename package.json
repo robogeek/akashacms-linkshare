@@ -11,12 +11,12 @@
     "type": "git",
     "url": "git://github.com/robogeek/akashacms-linkshare.git"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "node": ">=0.8.1"
   },
   "dependencies": {
     "async": ">=0.1.22",
-    "linksharejs": ">=0.0.1"
+    "linksharejs": ">=0.0.2"
   }
 }
