@@ -13,7 +13,7 @@ module.exports.queryAll = function(config, partial, query, callback) {
             throw err;
         } else {
             config.partial(partial, {
-                rows: rows,
+                rows: data.items,
                 query: query
             }, function(err, data) {
                 if (err) throw err;
@@ -22,13 +22,28 @@ module.exports.queryAll = function(config, partial, query, callback) {
         }
     });
 }
-   
+
+module.exports.queryFirst = function(config, partial, query, callback) {
+    linksharejs.query(query, function(err, data) {
+        if (err) {
+            throw err;
+        } else {
+            config.partial(partial, {
+                row: data.items && data.items[0] ? data.items[0] : undefined,
+                query: query
+            }, function(err, data) {
+                if (err) throw err;
+                else callback(null, data);
+            });
+        }
+    });
+}
+
 module.exports.query = function(config, partial, query, callback) {
     linksharejs.query(query, function(err, data) {
         if (err) {
             throw err;
         } else {
-            // util.log("# found: " + data.skimlinksProductAPI.numFound);
             var render2 = "";
             async.forEachSeries(data.items,
                 function(row, cb) {
