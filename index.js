@@ -8,7 +8,7 @@ module.exports.setup = function(token) {
 }
 
 module.exports.queryAll = function(config, partial, query, callback) {
-    linksharejs.query(query, function(err, data) {
+    linkshare.query(query, function(err, data) {
         if (err) {
             throw err;
         } else {
@@ -24,7 +24,7 @@ module.exports.queryAll = function(config, partial, query, callback) {
 }
 
 module.exports.queryFirst = function(config, partial, query, callback) {
-    linksharejs.query(query, function(err, data) {
+    linkshare.query(query, function(err, data) {
         if (err) {
             throw err;
         } else {
@@ -40,7 +40,7 @@ module.exports.queryFirst = function(config, partial, query, callback) {
 }
 
 module.exports.query = function(config, partial, query, callback) {
-    linksharejs.query(query, function(err, data) {
+    linkshare.query(query, function(err, data) {
         if (err) {
             throw err;
         } else {
