@@ -45,7 +45,7 @@ module.exports.query = function(config, partial, query, callback) {
             throw err;
         } else {
             var render2 = "";
-            async.forEachSeries(data.items,
+            async.eachSeries(data.items,
                 function(row, cb) {
                     // row.currencySymbol = currencySymbol(row.currency);
                     // util.log(util.inspect(row));
